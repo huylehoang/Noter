@@ -18,10 +18,15 @@
 		102323921EEDB92B00BABB28 /* FirData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102323911EEDB92B00BABB28 /* FirData.swift */; };
 		1034B8A31EBBCB910084C74C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1034B8A21EBBCB910084C74C /* GoogleService-Info.plist */; };
 		1034B8A51EBBCD460084C74C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1034B8A41EBBCD460084C74C /* SecondViewController.swift */; };
-		1039D62C1EC24D610049CCF8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1039D62B1EC24D610049CCF8 /* ThirdViewController.swift */; };
 		106A078F1EE9D4E000E27727 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A078E1EE9D4E000E27727 /* UpdateViewController.swift */; };
 		109DC0D21EE5E602004E06BA /* postStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109DC0D11EE5E602004E06BA /* postStruct.swift */; };
 		3C181CBE6BFA117583D1A2FE /* Pods_LoginScreen3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3729FD3C9AF402E97242D2EF /* Pods_LoginScreen3.framework */; };
+		6057DF8D21D36674004C4E30 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF8C21D36674004C4E30 /* Proxy.swift */; };
+		6057DF9021D367BF004C4E30 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF8F21D367BF004C4E30 /* UIApplication+Extension.swift */; };
+		6057DF9221D3680B004C4E30 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF9121D3680B004C4E30 /* Helper.swift */; };
+		6057DF9421D3718E004C4E30 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF9321D3718E004C4E30 /* Facade.swift */; };
+		6057DF9621D37423004C4E30 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF9521D37423004C4E30 /* Command.swift */; };
+		6057DF9921D37D60004C4E30 /* NoteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF9821D37D60004C4E30 /* NoteFactory.swift */; };
 		8D34C83B88681E84F701DC80 /* Pods_LoginScreen3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA680C6AD59193AFBD38005 /* Pods_LoginScreen3Tests.framework */; };
 		BEBEC16A85CD81BDDF006131 /* Pods_LoginScreen3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060BF106C58213CB258F7DB8 /* Pods_LoginScreen3UITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,11 +67,16 @@
 		102323911EEDB92B00BABB28 /* FirData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirData.swift; sourceTree = "<group>"; };
 		1034B8A21EBBCB910084C74C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1034B8A41EBBCD460084C74C /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		1039D62B1EC24D610049CCF8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		106A078E1EE9D4E000E27727 /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		109DC0D11EE5E602004E06BA /* postStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postStruct.swift; sourceTree = "<group>"; };
 		26D65D1F61497F00D974F629 /* Pods-LoginScreen3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen3Tests/Pods-LoginScreen3Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3729FD3C9AF402E97242D2EF /* Pods_LoginScreen3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginScreen3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6057DF8C21D36674004C4E30 /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
+		6057DF8F21D367BF004C4E30 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		6057DF9121D3680B004C4E30 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		6057DF9321D3718E004C4E30 /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
+		6057DF9521D37423004C4E30 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		6057DF9821D37D60004C4E30 /* NoteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFactory.swift; sourceTree = "<group>"; };
 		A218DF0D6EBAE66E5F49654F /* Pods-LoginScreen3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen3Tests/Pods-LoginScreen3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0D1314F971E1504563A8B3 /* Pods-LoginScreen3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen3UITests/Pods-LoginScreen3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		C8F6314863F2DE72E320AB23 /* Pods-LoginScreen3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen3/Pods-LoginScreen3.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +148,7 @@
 		101C2DD11EB8899B0015BCEF /* LoginScreen3 */ = {
 			isa = PBXGroup;
 			children = (
+				6057DF8E21D36777004C4E30 /* Ultilities */,
 				10FF70B21FD47A6F00595095 /* Models */,
 				10FF70B11FD47A5200595095 /* View Controllers */,
 				101C2DD21EB8899B0015BCEF /* AppDelegate.swift */,
@@ -146,6 +157,10 @@
 				101C2DDB1EB8899B0015BCEF /* LaunchScreen.storyboard */,
 				101C2DDE1EB8899B0015BCEF /* Info.plist */,
 				1034B8A21EBBCB910084C74C /* GoogleService-Info.plist */,
+				6057DF8C21D36674004C4E30 /* Proxy.swift */,
+				6057DF9321D3718E004C4E30 /* Facade.swift */,
+				6057DF9521D37423004C4E30 /* Command.swift */,
+				6057DF9821D37D60004C4E30 /* NoteFactory.swift */,
 			);
 			path = LoginScreen3;
 			sourceTree = "<group>";
@@ -173,7 +188,6 @@
 			children = (
 				101C2E001EB889DC0015BCEF /* FirstViewController.swift */,
 				1034B8A41EBBCD460084C74C /* SecondViewController.swift */,
-				1039D62B1EC24D610049CCF8 /* ThirdViewController.swift */,
 				106A078E1EE9D4E000E27727 /* UpdateViewController.swift */,
 				1003C91D1EDCDACF00D570E5 /* TableViewCell.swift */,
 			);
@@ -202,6 +216,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6057DF8E21D36777004C4E30 /* Ultilities */ = {
+			isa = PBXGroup;
+			children = (
+				6057DF8F21D367BF004C4E30 /* UIApplication+Extension.swift */,
+				6057DF9121D3680B004C4E30 /* Helper.swift */,
+			);
+			name = Ultilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,7 +237,6 @@
 				101C2DCC1EB8899B0015BCEF /* Frameworks */,
 				101C2DCD1EB8899B0015BCEF /* Resources */,
 				DBE61B07CE93C4DE4E2CF402 /* [CP] Embed Pods Frameworks */,
-				3192BD9D3DBC83FF8B6D406D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,8 +255,6 @@
 				101C2DDF1EB8899B0015BCEF /* Sources */,
 				101C2DE01EB8899B0015BCEF /* Frameworks */,
 				101C2DE11EB8899B0015BCEF /* Resources */,
-				7480DE1CAABA7AAF88FF46FF /* [CP] Embed Pods Frameworks */,
-				BB9443612415A656650CD1DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,8 +274,6 @@
 				101C2DEA1EB8899B0015BCEF /* Sources */,
 				101C2DEB1EB8899B0015BCEF /* Frameworks */,
 				101C2DEC1EB8899B0015BCEF /* Resources */,
-				63D2B9294367ED1D01D8AE37 /* [CP] Embed Pods Frameworks */,
-				142A51A1CBAE85A9F7E9BF73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,79 +360,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		142A51A1CBAE85A9F7E9BF73 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen3UITests/Pods-LoginScreen3UITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3192BD9D3DBC83FF8B6D406D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen3/Pods-LoginScreen3-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		31D9CA5B182A3B15EB9C1969 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginScreen3Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		63D2B9294367ED1D01D8AE37 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen3UITests/Pods-LoginScreen3UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7480DE1CAABA7AAF88FF46FF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen3Tests/Pods-LoginScreen3Tests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A9771ABE9A0A4329A3F004D /* [CP] Check Pods Manifest.lock */ = {
@@ -423,13 +384,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginScreen3UITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B93F6CD40AB94EC643D8CA78 /* [CP] Check Pods Manifest.lock */ = {
@@ -438,28 +402,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginScreen3-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BB9443612415A656650CD1DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen3Tests/Pods-LoginScreen3Tests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBE61B07CE93C4DE4E2CF402 /* [CP] Embed Pods Frameworks */ = {
@@ -468,9 +420,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LoginScreen3/Pods-LoginScreen3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -484,14 +441,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6057DF8D21D36674004C4E30 /* Proxy.swift in Sources */,
+				6057DF9921D37D60004C4E30 /* NoteFactory.swift in Sources */,
 				1003C91E1EDCDACF00D570E5 /* TableViewCell.swift in Sources */,
 				1034B8A51EBBCD460084C74C /* SecondViewController.swift in Sources */,
 				102323921EEDB92B00BABB28 /* FirData.swift in Sources */,
+				6057DF9021D367BF004C4E30 /* UIApplication+Extension.swift in Sources */,
 				109DC0D21EE5E602004E06BA /* postStruct.swift in Sources */,
+				6057DF9421D3718E004C4E30 /* Facade.swift in Sources */,
 				101C2DD31EB8899B0015BCEF /* AppDelegate.swift in Sources */,
-				1039D62C1EC24D610049CCF8 /* ThirdViewController.swift in Sources */,
+				6057DF9221D3680B004C4E30 /* Helper.swift in Sources */,
 				106A078F1EE9D4E000E27727 /* UpdateViewController.swift in Sources */,
 				101C2E011EB889DC0015BCEF /* FirstViewController.swift in Sources */,
+				6057DF9621D37423004C4E30 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

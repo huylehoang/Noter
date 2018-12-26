@@ -16,7 +16,6 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     var firData = FirData()
     
     var posts:[postStruct] = []
-    var databaseRef: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +24,12 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         firData.delegate = self
-        firData.fetchData()
-//        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
+        
     }
-    
-//    func loadList(notification: NSNotification){
-//        //load data here
-//        self.tableView.reloadData()
-//    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        firData.fetchData()
+    }
     
     func didReceiveData(data: [postStruct]) {
         self.posts = data
@@ -45,7 +42,12 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func LogOut(_ sender: Any) {  
+    @IBAction func Add(_ sender: UIBarButtonItem) {
+        let updateVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UpdateViewController") as! UpdateViewController
+        self.navigationController?.pushViewController(updateVC, animated: true)
+    }
+    
+    @IBAction func LogOut(_ sender: Any) {
         let firebaseAuth = FIRAuth.auth()
         do {
             try firebaseAuth?.signOut()
@@ -72,9 +74,9 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "updateTodo" {
             let destination = segue.destination as! UpdateViewController
-            let indexPath = tableView.indexPathForSelectedRow!
-
-            destination.todo = self.posts[indexPath.row]
+            if let indexPath = tableView.indexPathForSelectedRow {
+                destination.todo = self.posts[indexPath.row]
+            }
         }
     }
 

@@ -16,20 +16,17 @@ class UpdateViewController: UIViewController {
     @IBOutlet weak var contentInputUpdate: UITextView!
     
     var todo: postStruct!
-    var firData = FirData()
-    
-    var databaseRef: FIRDatabaseReference! {
-        return FIRDatabase.database().reference()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        titleInputUpdate.text = todo.title
-        contentInputUpdate.text = todo.content
-        
-        
+        if let todo = todo  {
+            titleInputUpdate.text = todo.title
+            contentInputUpdate.text = todo.content
+        } else {
+            self.title  = "Add Note"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,36 +35,10 @@ class UpdateViewController: UIViewController {
     }
 
     @IBAction func DoneButtonUpdate(_ sender: Any) {
+        let titleInput = titleInputUpdate.text
+        let contentInput = contentInputUpdate.text
+        NoteFactory.updateNote(todo, tilte: titleInput, content: contentInput)
+        self.navigationController?.popViewController(animated: true)
         
-//        var title = String()
-//        if titleInputUpdate.text == "" {
-//            titleInputUpdate.text = "No Title"
-//            title = titleInputUpdate.text!
-//        }else{
-//            title = titleInputUpdate.text!
-//        }
-//        
-//        var content = String()
-//        if contentInputUpdate.text == "" {
-//            contentInputUpdate.text = "No Content"
-//            content = contentInputUpdate.text!
-//        }else{
-//            content = contentInputUpdate.text!
-//        }
-//        
-//        let updatedPost = postStruct(title: title, content: content)
-//        
-//        let key = todo.ref!.key
-//        
-//        let updateRef = databaseRef.child("/Notes/\(key)")
-//        
-//        updateRef.updateChildValues(updatedPost.toAnyObject())
-        
-        let title:String! = titleInputUpdate.text!
-        let content:String! = contentInputUpdate.text!
-        
-        firData.updateData(titleInputUpdate: title, contentInputUpdate: content)
-        
-        _ = navigationController?.popViewController(animated: true)
     }
 }
