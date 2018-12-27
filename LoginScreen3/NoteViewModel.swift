@@ -10,7 +10,7 @@ import Foundation
 
 class NoteViewModel {
     fileprivate var notes: [postStruct] = []
-    var selectedNote: postStruct?
+    private var selectedNote: postStruct?
     var getNoteTitles: (([String])->())?
     
     var firData = FirData()
@@ -18,8 +18,11 @@ class NoteViewModel {
     init() {
         firData.delegate = self
         firData.fetchData()
+    }
+    
+    func resetSelected() {
         if selectedNote != nil {
-            selectedNote =  nil
+            selectedNote = nil
         }
     }
     
@@ -56,7 +59,7 @@ extension NoteViewModel: Delegate {
             }
             return descending
         }).map{ $0 }
-        
+
         let noteTitles = self.notes.map({ (post) -> String in
             return post.title
         })
@@ -66,6 +69,5 @@ extension NoteViewModel: Delegate {
         } else {
             self.getNoteTitles?([])
         }
-        
     }
 }

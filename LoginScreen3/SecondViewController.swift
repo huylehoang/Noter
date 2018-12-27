@@ -27,6 +27,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     private func reloadData() {
+        noteViewModel.resetSelected()
         noteViewModel.getNoteTitles = { [unowned self] (notes) in
             self.noteTitles = notes.map{ $0 }
             self.tableView.reloadData()
@@ -39,8 +40,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     @IBAction func Add(_ sender: UIBarButtonItem) {
-        let updateVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UpdateViewController") as! UpdateViewController
-        self.navigationController?.pushViewController(updateVC, animated: true)
+        performSegue(withIdentifier: "updateTodo", sender: self)
     }
     
     @IBAction func LogOut(_ sender: Any) {
