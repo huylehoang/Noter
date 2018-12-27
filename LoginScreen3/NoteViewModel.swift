@@ -27,18 +27,12 @@ class NoteViewModel {
     }
     
     func selectNote(at index: Int, _ completion: (()->())? = nil) {
-        if index >= self.notes.count {
+        if self.notes.count == 0 && index >= self.notes.count {
             return
         }
         
-        if let willSelect = notes.enumerated().filter({ (i, post) -> Bool in
-            return i == index
-        }).map({ (index, post) -> postStruct in
-            return post
-        }).first {
-            self.selectedNote = willSelect
-            completion?()
-        }
+        self.selectedNote = self.notes[index]
+        completion?()
     }
     
     func getSelectedNote() -> postStruct? {
