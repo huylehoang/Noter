@@ -23,7 +23,6 @@ class FirData {
     }
     
     func fetchData(){
-        var posts:[postStruct] = []
         let databaseRefs = databaseRef.child("Notes")
         
         databaseRefs.queryOrderedByKey().observe(FIRDataEventType.value, with: { (snapshot) in
@@ -32,8 +31,7 @@ class FirData {
                 let newPostStruct = postStruct(snapshot: item as! FIRDataSnapshot)
                 newPosts.append(newPostStruct)
             }
-            posts = newPosts
-            self.delegate?.didReceiveData(data: posts)
+            self.delegate?.didReceiveData(data: newPosts)
         })
     }
 }
