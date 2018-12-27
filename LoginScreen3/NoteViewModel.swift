@@ -10,7 +10,6 @@ import Foundation
 
 class NoteViewModel {
     fileprivate var notes: [postStruct] = []
-    var noteTitles: [String] = []
     var selectedNote: postStruct?
     var getNoteTitles: (([String])->())?
     
@@ -58,12 +57,12 @@ extension NoteViewModel: Delegate {
             return descending
         }).map{ $0 }
         
-        self.noteTitles = self.notes.map({ (post) -> String in
+        let noteTitles = self.notes.map({ (post) -> String in
             return post.title
         })
         
-        if self.noteTitles.count > 0 {
-            self.getNoteTitles?(self.noteTitles)
+        if noteTitles.count > 0 {
+            self.getNoteTitles?(noteTitles)
         } else {
             self.getNoteTitles?([])
         }
