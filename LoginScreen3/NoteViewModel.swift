@@ -27,7 +27,7 @@ class NoteViewModel {
     }
     
     func selectNote(at index: Int, _ completion: (()->())? = nil) {
-        if self.notes.count == 0 && index >= self.notes.count {
+        if self.notes.count == 0 || index >= self.notes.count {
             return
         }
         
