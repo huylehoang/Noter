@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseDatabase
 
 class UpdateViewController: UIViewController {
 

@@ -16,10 +16,12 @@ struct postStruct {
     var content : String!
     var ref: FIRDatabaseReference?
     var key: String!
+    var date: Int64!
     
-    init(title: String, content: String, key: String = "") {
+    init(title: String, content: String, date: Int64 = 0, key: String = "") {
         self.title = title
         self.content = content
+        self.date = date
         self.key = key
         self.ref = FIRDatabase.database().reference()
     }
@@ -27,11 +29,16 @@ struct postStruct {
     init(snapshot: FIRDataSnapshot) {
         self.title = (snapshot.value as? NSDictionary)?["title"] as? String ?? ""
         self.content = (snapshot.value as? NSDictionary)?["content"] as? String ?? ""
+        self.date = (snapshot.value as? NSDictionary)?["date"] as? Int64 ?? 0
         self.key = snapshot.key
         self.ref = snapshot.ref
     }
     
-    func toAnyObject() -> [String: AnyObject] {
+    func toAnyObjectForAdding() -> [String: AnyObject] {
+        return ["title" : title as AnyObject, "content" : content as AnyObject, "date" : date as AnyObject]
+    }
+    
+    func toAnyObjectForUpdating() -> [String: AnyObject] {
         return ["title" : title as AnyObject, "content" : content as AnyObject]
     }
 }

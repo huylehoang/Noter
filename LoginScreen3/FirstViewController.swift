@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
-import FirebaseDatabase
 
 class FirstViewController: UIViewController {
 
@@ -45,7 +42,6 @@ class FirstViewController: UIViewController {
     }
     
     private func showLoginView() {
-//        Controller.setEnabled(true, forSegmentAt: 0)
         self.LoginView.isHidden = false
         self.SignUpView.isHidden = true
         nameRegister.text = ""

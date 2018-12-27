@@ -25,8 +25,11 @@
 		6057DF9021D367BF004C4E30 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF8F21D367BF004C4E30 /* UIApplication+Extension.swift */; };
 		6057DF9221D3680B004C4E30 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF9121D3680B004C4E30 /* Helper.swift */; };
 		6057DF9421D3718E004C4E30 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF9321D3718E004C4E30 /* Facade.swift */; };
-		6057DF9621D37423004C4E30 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF9521D37423004C4E30 /* Command.swift */; };
 		6057DF9921D37D60004C4E30 /* NoteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057DF9821D37D60004C4E30 /* NoteFactory.swift */; };
+		6061E30021D46C6C00E83B70 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061E2FF21D46C6C00E83B70 /* NoteViewModel.swift */; };
+		6061E30321D4789F00E83B70 /* AuthCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061E30221D4789F00E83B70 /* AuthCommand.swift */; };
+		6061E30521D478BE00E83B70 /* NoteCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061E30421D478BE00E83B70 /* NoteCommand.swift */; };
+		6061E30A21D4800000E83B70 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061E30921D4800000E83B70 /* Date+Extension.swift */; };
 		8D34C83B88681E84F701DC80 /* Pods_LoginScreen3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA680C6AD59193AFBD38005 /* Pods_LoginScreen3Tests.framework */; };
 		BEBEC16A85CD81BDDF006131 /* Pods_LoginScreen3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060BF106C58213CB258F7DB8 /* Pods_LoginScreen3UITests.framework */; };
 /* End PBXBuildFile section */
@@ -75,8 +78,11 @@
 		6057DF8F21D367BF004C4E30 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		6057DF9121D3680B004C4E30 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6057DF9321D3718E004C4E30 /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
-		6057DF9521D37423004C4E30 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		6057DF9821D37D60004C4E30 /* NoteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFactory.swift; sourceTree = "<group>"; };
+		6061E2FF21D46C6C00E83B70 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		6061E30221D4789F00E83B70 /* AuthCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCommand.swift; sourceTree = "<group>"; };
+		6061E30421D478BE00E83B70 /* NoteCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCommand.swift; sourceTree = "<group>"; };
+		6061E30921D4800000E83B70 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A218DF0D6EBAE66E5F49654F /* Pods-LoginScreen3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen3Tests/Pods-LoginScreen3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0D1314F971E1504563A8B3 /* Pods-LoginScreen3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen3UITests/Pods-LoginScreen3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		C8F6314863F2DE72E320AB23 /* Pods-LoginScreen3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScreen3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginScreen3/Pods-LoginScreen3.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +154,11 @@
 		101C2DD11EB8899B0015BCEF /* LoginScreen3 */ = {
 			isa = PBXGroup;
 			children = (
+				6061E30821D4794D00E83B70 /* Factory */,
+				6061E30721D4793500E83B70 /* Facade */,
+				6061E30621D478F900E83B70 /* Proxy */,
+				6061E30121D4788B00E83B70 /* Command */,
+				6061E2FE21D46C5900E83B70 /* NoteViewModel */,
 				6057DF8E21D36777004C4E30 /* Ultilities */,
 				10FF70B21FD47A6F00595095 /* Models */,
 				10FF70B11FD47A5200595095 /* View Controllers */,
@@ -157,10 +168,6 @@
 				101C2DDB1EB8899B0015BCEF /* LaunchScreen.storyboard */,
 				101C2DDE1EB8899B0015BCEF /* Info.plist */,
 				1034B8A21EBBCB910084C74C /* GoogleService-Info.plist */,
-				6057DF8C21D36674004C4E30 /* Proxy.swift */,
-				6057DF9321D3718E004C4E30 /* Facade.swift */,
-				6057DF9521D37423004C4E30 /* Command.swift */,
-				6057DF9821D37D60004C4E30 /* NoteFactory.swift */,
 			);
 			path = LoginScreen3;
 			sourceTree = "<group>";
@@ -221,8 +228,50 @@
 			children = (
 				6057DF8F21D367BF004C4E30 /* UIApplication+Extension.swift */,
 				6057DF9121D3680B004C4E30 /* Helper.swift */,
+				6061E30921D4800000E83B70 /* Date+Extension.swift */,
 			);
 			name = Ultilities;
+			sourceTree = "<group>";
+		};
+		6061E2FE21D46C5900E83B70 /* NoteViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6061E2FF21D46C6C00E83B70 /* NoteViewModel.swift */,
+			);
+			name = NoteViewModel;
+			sourceTree = "<group>";
+		};
+		6061E30121D4788B00E83B70 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				6061E30221D4789F00E83B70 /* AuthCommand.swift */,
+				6061E30421D478BE00E83B70 /* NoteCommand.swift */,
+			);
+			name = Command;
+			sourceTree = "<group>";
+		};
+		6061E30621D478F900E83B70 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				6057DF8C21D36674004C4E30 /* Proxy.swift */,
+			);
+			name = Proxy;
+			sourceTree = "<group>";
+		};
+		6061E30721D4793500E83B70 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				6057DF9321D3718E004C4E30 /* Facade.swift */,
+			);
+			name = Facade;
+			sourceTree = "<group>";
+		};
+		6061E30821D4794D00E83B70 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				6057DF9821D37D60004C4E30 /* NoteFactory.swift */,
+			);
+			name = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,10 +490,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6061E30021D46C6C00E83B70 /* NoteViewModel.swift in Sources */,
+				6061E30521D478BE00E83B70 /* NoteCommand.swift in Sources */,
 				6057DF8D21D36674004C4E30 /* Proxy.swift in Sources */,
 				6057DF9921D37D60004C4E30 /* NoteFactory.swift in Sources */,
 				1003C91E1EDCDACF00D570E5 /* TableViewCell.swift in Sources */,
+				6061E30A21D4800000E83B70 /* Date+Extension.swift in Sources */,
 				1034B8A51EBBCD460084C74C /* SecondViewController.swift in Sources */,
+				6061E30321D4789F00E83B70 /* AuthCommand.swift in Sources */,
 				102323921EEDB92B00BABB28 /* FirData.swift in Sources */,
 				6057DF9021D367BF004C4E30 /* UIApplication+Extension.swift in Sources */,
 				109DC0D21EE5E602004E06BA /* postStruct.swift in Sources */,
@@ -453,7 +506,6 @@
 				6057DF9221D3680B004C4E30 /* Helper.swift in Sources */,
 				106A078F1EE9D4E000E27727 /* UpdateViewController.swift in Sources */,
 				101C2E011EB889DC0015BCEF /* FirstViewController.swift in Sources */,
-				6057DF9621D37423004C4E30 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
